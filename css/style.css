@@ -1,0 +1,60 @@
+:root{
+    --dark : black;
+    --light : white;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--light);
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+.dark{
+    background-color: var(--dark);
+    color: var(--light);
+}
+.board{
+    max-width: 480px;
+    height: 25rem;
+    background-color: rgba(17, 17, 17, 0.74);
+    border: 2px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    transition:cubic-bezier(0.785, 0.135, 0.15, 0.86) all 2s ;
+    
+
+}
+
+.box{
+    flex: 0 1 30px;
+    margin:5px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 5s ease;
+    animation: forwards;
+    box-shadow: 0px 0px 2px white;
+}
+.box:hover{
+transition-duration: 0s;
+}
+.mode{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    background-color: var(--dark);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.mode-dark{
+    background-color: var(--light);
+}
+@media screen and (max-width:480px) {
+.board{
+    max-width: 320px;
+}
+}
